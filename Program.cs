@@ -19,9 +19,6 @@ namespace NetCore
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseKestrel()                                       // Default asp.net embedded web server
-                .UseContentRoot(Directory.GetCurrentDirectory())    // Location of the content root folder
-                .UseIISIntegration()                                // Use IIS for reverse proxy
                 .UseStartup<Startup>();                             // Include the type that contains informations for initialization
     }
 }
